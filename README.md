@@ -1,4 +1,3 @@
-# desenvolvendo-o-dio-bank
 Projeto desenvolvido com conceitos básicos de typescript
 
 Tecnologias
@@ -17,25 +16,25 @@ npm install
 
 npm run dev
 
-Desafios
+💳 Desafio: Sistema Bancário com TypeScript 
 
-[ ] Implementar os métodos de depósito (deposit) e saque (withdraw) na classe DioAccount
+Implementação de um sistema bancário orientado a objetos em TypeScript, aplicando conceitos como encapsulamento, herança, imutabilidade e controle de acesso. 
 
-    Os valores dos saldos devem ser alterados, de acordo com o valor informado para depósito
-    Apenas contas com o status true e saldo (balance) maior que o valor solicitado podem fazer saques
+✅ Requisitos Implementados 
 
-[ ] Implementar o método de empréstimo (getLoan) na classe CompanyAccount
+    Classe base DioAccount com atributos privados e imutáveis (name, accountNumber).
+    Métodos de depósito e saque com validações:
+        Apenas contas ativas (status = true) podem operar.
+        Saque só é permitido se houver saldo suficiente.
+         
+    Classe CompanyAccount com método de empréstimo, disponível apenas para contas ativas.
+    Nova classe BonusAccount (herdando de DioAccount) que acrescenta R$10 a todo depósito realizado.
+    Todos os atributos são privados; name e accountNumber são readonly (imutáveis).
+    Arquivo app.ts com instâncias e testes de todos os tipos de conta, demonstrando o funcionamento dos métodos.     
 
-    Os valores do saldos deve ser acrescidos, de acordo com o valor informado para empréstimo
-    Apenas contas com o status true podem fazer empréstimo
+🎯 Objetivos do Desafio 
 
-[ ] Criar um novo tipo de conta a partir da DioAccount
-
-    Esta conta não deve receber novos atributos
-    Esta conta terá um método de depósito, que acresce 10 a mais ao valor informado para depósito. (Ex: Um depósito de 100, será de 110 no final)
-
-[ ] Todos os atributos de qualquer conta devem ser privados
-
-[ ] Os atributos name e accountNumber não podem ser alterados internamente ou externamente
-
-[ ] Criar instancias para cada um dos tipos de conta no app.ts e executar os métodos possíveis.
+    Aplicar boas práticas de programação orientada a objetos.
+    Garantir segurança e consistência nas operações bancárias.
+    Explorar herança e polimorfismo com sobrescrita de métodos.
+     
